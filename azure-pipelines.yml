@@ -141,7 +141,7 @@ stages:
             inputs:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               resourceGroupName: 'wvn-fontys'
-              webAppName: '$(WebAppNameStaging)'
+              webAppName: 'grad-demo-wvn-staging-premium/swap'
               sourceSlot: 'swap'
               targetSlot: 'production'
               action: 'Swap Slots'
