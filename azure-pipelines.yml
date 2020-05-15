@@ -114,7 +114,7 @@ stages:
   - job: RunUITests
     dependsOn: Deploy
     displayName: 'Run UI tests'
-    # check Firefox behaviour
+    # check Firefox behaviour!
     pool:
       vmImage: 'windows-2019'
     variables:
