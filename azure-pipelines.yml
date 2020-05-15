@@ -88,28 +88,3 @@ stages:
               appName: '$(WebAppName)'
               appType: webAppLinux
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/Tailspin.SpaceGame.Web.zip'
-
-          - task: AzureFunctionApp@1
-            displayName: 'Azure Function Deploy: leaderboard'
-            inputs:
-              azureSubscription: 'Resource Manager functionsDemo'
-              appType: functionAppLinux
-              appName: 'functionsDemoWebApp'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
-              runtimeStack: DOCKER|microsoft/azure-functions-dotnet-core2.0:2.0
-              startUpCommand: 'func azure functionapp publish functionsDemoFunctionApp --no-bundler'
-          
-          - task: AzureAppServiceSettings@1
-            displayName: 'Update web app settings'
-            inputs:
-              azureSubscription: 'Resource Manager functionsDemo'
-              appName: 'functionsDemoWebApp'
-              resourceGroupName: 'functionsDemoResourceGroup'
-              appSettings: |
-                [
-                  {
-                    "name": "AppSettings:LeaderboardFunctionUrl",
-                    "value": "http://functionsDemoFunctionApp.azurewebsites.net/api/LeaderboardFunction",
-                    "slotSetting": false
-                  }
-                ]
