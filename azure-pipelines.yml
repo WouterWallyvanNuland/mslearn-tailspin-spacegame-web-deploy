@@ -21,7 +21,7 @@ stages:
         command: buildAndPush
         buildContext: $(Build.Repository.LocalPath)
         repository: $(webRepository)
-        dockerfile: '**\Tailspin.SpaceGame.Web\Dockerfile'
+        dockerfile: '**/Tailspin.SpaceGame.Web/Dockerfile'
         containerRegistry: 'Azure Container Registry WvN Connection'
         tags: |
           $(tag)
