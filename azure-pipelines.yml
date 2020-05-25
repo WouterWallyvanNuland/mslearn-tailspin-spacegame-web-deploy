@@ -2,6 +2,7 @@ trigger:
 - '*'
 #adjusted to deploy containerised applications
 variables:
+  buildConfiguration: 'Release'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
 
