@@ -1,7 +1,7 @@
 ﻿// Page
 body {
     color: blue;
-    --link: #064EC0;
+    --link: black;
 }
 
 a {
@@ -21,9 +21,9 @@ section {
 }
 
 .intro {
-    height: 350px;
+    height: 700px;
     background-color: green;
-    background-image: url('/images/logo_fourtress.png');
+    background-image: url('/images/logo_fourtress_orange.png');
     background-size: 1440px;
     background-position: center top;
     background-repeat: no-repeat;
