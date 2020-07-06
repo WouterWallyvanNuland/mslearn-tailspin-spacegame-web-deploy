@@ -134,7 +134,7 @@ stages:
               deployToSlotOrASE: 'true'
               resourceGroupName: 'afstuderen-blue-green-demo-wvn'
               slotName: 'swap'
-              appName: '$(WebAppNameStaging)'
+              appName: 'afstuderen-blue-green-demo-wvn-web-staging'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
           - task: AzureAppServiceManage@0
             displayName: 'Swap deployment slots'
