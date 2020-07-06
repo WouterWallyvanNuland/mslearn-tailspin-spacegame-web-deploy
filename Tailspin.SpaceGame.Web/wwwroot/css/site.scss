@@ -2,6 +2,7 @@
 body {
     color: blue;
     --link: black;
+    height: 100%;
 }
 
 a {
@@ -21,25 +22,10 @@ section {
 }
 
 .intro {
-        height: 350px;
-        background-size: 1440px;
-        background-image: "/images/galileo_inlogscherm.png";
-        background-position: center top;
+        height: 100%;
+        background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
-
-    .title {
-        width: 20rem;
-        margin-top: 2rem;
-    }
-
-    p {
-        color: black;
-        font-weight: 600;
-        font-size: 1.6rem;
-        text-shadow: 0 0 2px black;
-        margin-top: 2rem;
-    }
+        background-size: cover;
 }
 
 .download {
