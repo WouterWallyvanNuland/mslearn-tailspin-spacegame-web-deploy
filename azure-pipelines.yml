@@ -141,7 +141,7 @@ stages:
             inputs:
               azureSubscription: 'Resource Manager - Afstuderen - Blue Green'
               resourceGroupName: 'afstuderen-blue-green-demo-wvn'
-              webAppName: '$(WebAppNameStaging)'
+              webAppName: 'afstuderen-blue-green-demo-wvn-web-stagi'
               sourceSlot: 'swap'
               targetSlot: 'production'
               action: 'Swap Slots'
